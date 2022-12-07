@@ -20,9 +20,9 @@ function addToCart(cookie) {
     //add the correct price to the currentPrice variable
 
     if (cookie == 'peanut butter'){
-        currentPrice == currentPrice + 20
+    currentPrice == currentPrice + 20
     } else if (cookie == 'sandles'){
-        currentPrice ==currentPrice +30
+    currentPrice ==currentPrice +30
     } else if (cookie == 'party press'){
     currentPrice = currentPrice + 35 
     } else if (cookie == 'chocloate chip'){
@@ -40,7 +40,7 @@ function checkout() {
     //let your customer know how many items they are purchasing and the price 
 window.alert(`You have a total of ${itemCount} items that will cost ${currentPrice}. Thank you for shopping with us `)
 
-currentPrice=0
+let currentPrice=0
 itemCount=0
 
 document.getElementById("cartItems").innerHTML=itemCount
@@ -51,7 +51,7 @@ document.querySelector(".hoverText").innerHTML=currentPrice
 function darkMode() {
     // add your code here
 
-    document.querySelector("body").stylebackgroundColor="black"
+    document.querySelector("body").style.backgroundColor ="black"
     document.querySelector("main").style.color="white"
     document.querySelector("h1").style.color="white"
 }
