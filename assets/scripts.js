@@ -1,3 +1,21 @@
+const cart = {
+    currentPrice:0,
+    items :[],
+    additem: function(cookie,price) {
+        //add a cookie(string) to the items array
+        
+        this.items.push(cookie)
+        
+        //add the price(number) to the currentPrice properties
+        
+        this.currentPrice=this.currentPrice+price
+    },
+clear:function() {
+    //reset the currentPrice and items properties
+    this.currentPrice=0
+    this.items=[]
+}
+}
 let currentPrice=0, itemCount=0
 
 function addToCart(cookie) {
@@ -31,7 +49,9 @@ function addToCart(cookie) {
    
    document.querySelector(".hoverText").innerHTML = currentPrice
    
-    console.log(currentPrice)
+    console.log(cart)
+
+    document.getElementById("cartItems").InnerHTML=cart.items.length
 }
 
 
@@ -40,7 +60,7 @@ function checkout() {
     //let your customer know how many items they are purchasing and the price 
 window.alert(`You have a total of ${itemCount} items that will cost ${currentPrice}. Thank you for shopping with us `)
 
-let currentPrice=0
+currentPrice=0
 itemCount=0
 
 document.getElementById("cartItems").innerHTML=itemCount
